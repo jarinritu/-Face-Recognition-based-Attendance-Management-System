@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<style>
+ 
+
+h4{
+  margin:auto;
+  color: #8A5B73;
+  width: 800px;
+  font-weight: bold;
+  text-align:center;
+  left:50%;
+  font-family: comic sans ms;
+  user-select: none;
+  background-color: #2E1E26;
+  padding-top: 3px
+  padding-right: 0px;
+  padding-bottom:3px;
+  padding-left: 0px;
+  background:rgba(213, 219, 219 ,1);
+}
+
+.f{
+  margin:auto;
+  font-family: comic sans ms; 
+  color:#8A5B73;
+  position: center;
+  width: 400px;
+  padding: 3px 23px 6px 10px;
+  background:rgba(213, 219, 219 ,1);
+
+}
+
+
+.a{
+  
+  font-size: 18px;
+  padding: 7px;
+  width:100%;
+  border:1px solid #8A5B73;
+  color:black;
+  display: block;
+  background:transparent;
+
+}
+
+
+
+
+.buttons{
+  text-align: center;
+}
+
+.buttons input  {
+  text-align: center;
+  height: 50px;
+  width: 150px;
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  background: #B47494;
+  outline: none;
+  cursor: pointer;
+  border: 3px solid #331a00;
+  border-radius: 25px;
+  transition: .4s;
+  font-family: comic sans ms;
+   
+}
+
+.buttons input:hover{
+  background: #7E0541;}
+
+</style>
+
+
+
+</head>
+
+<body class="b">
+
+
+<h4 style="font-size: 45px">Student Atendance Record</h4>
+
+<br>
+<form action=" ">
+
+<div class= "f">
+  <p style="font-size: 20px"> View total attendance and percentage-</p>
+
+  
+    <label for="semester" >  Semester</label>
+  <select name="semester" class="a" required>
+      <option selected hidden value="">Select Semester</option>
+      <option value="1-1">1-1</option>
+      <option value="1-2">1-2</option>
+      <option value="2-1">2-1</option>
+      <option value="2-1">2-2</option>
+      <option value="3-1">3-1</option>
+      <option value="3-2">3-2</option>
+      <option value="4-1">4-1</option>
+      <option value="4-2">4-2</option>
+      <option value="Masters">Masters</option>
+     </select>
+<label for="course" >Enter Course Name </label>
+    <input class="a" type="course" name="course" id="course" required>
+    
+     </div>
+<br>
+
+ <div class="buttons">
+        
+      <input type="submit" > 
+      
+    </div>
+
+    </form>
+
+    <br>
+
+<form action=" ">
+
+<div class= "f">
+  <p style="font-size: 20px"> View attendance of a specific date-</p>
+
+  <label for="semester" >  Semester</label>
+  <select name="semester" class="a" required>
+      <option selected hidden value="">Select Semester</option>
+      <option value="1-1">1-1</option>
+      <option value="1-2">1-2</option>
+      <option value="2-1">2-1</option>
+      <option value="2-1">2-2</option>
+      <option value="3-1">3-1</option>
+      <option value="3-2">3-2</option>
+      <option value="4-1">4-1</option>
+      <option value="4-2">4-2</option>
+      <option value="Masters">Masters</option>
+     </select>
+
+<label for="course" >Enter Course Name </label>
+    <input class="a" type="course" name="course" id="course" required>
+    <label for="date" >Select Date </label>
+    <input class="a" type="date" name="date" id="date" required>
+    
+     </div>
+<br>
+   
+
+<br>
+   <div class="buttons">
+        
+      <input type="submit" > 
+      
+    </div>
+
+  </form>
+   
+
+</body>
+</html>

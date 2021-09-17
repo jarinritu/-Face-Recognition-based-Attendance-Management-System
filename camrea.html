@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+          <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Font awesome kit code-->
+    <script src="https://kit.fontawesome.com/c3268b65c5.js" crossorigin="anonymous"></script>
+    <!--external css file-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Student's Attendance System</title>
+    </head>
+    <body>
+        <div class="demo-conversion"> <a href="#" target="_top"><h2 style="text-align: center;">Camera For Face Recognition</h2></a></div>
+<br>
+<br>
+<br>
+<div id="promoNode">
+	
+
+</div>
+<p class="demo-conversion"><button><a href="kaiser_sir.html" target="_top">Go Back</a></button></p>
+	<video id="video" width="100%" height="500" autoplay></video>
+	
+	<canvas id="canvas" width="640" height="480"></canvas>
+
+	<script>
+
+		// Put event listeners into place
+		window.addEventListener("DOMContentLoaded", function() {
+			// Grab elements, create settings, etc.
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            var video = document.getElementById('video');
+            var mediaConfig =  { video: true };
+            var errBack = function(e) {
+            	console.log('An error has occurred!', e)
+            };
+
+			// Put video listeners into place
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia(mediaConfig).then(function(stream) {
+					//video.src = window.URL.createObjectURL(stream);
+					video.srcObject = stream;
+                    video.play();
+                });
+            }
+
+            /* Legacy code below! */
+            else if(navigator.getUserMedia) { // Standard
+				navigator.getUserMedia(mediaConfig, function(stream) {
+					video.src = stream;
+					video.play();
+				}, errBack);
+			} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+				navigator.webkitGetUserMedia(mediaConfig, function(stream){
+					video.src = window.webkitURL.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			} else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
+				navigator.mozGetUserMedia(mediaConfig, function(stream){
+					video.src = window.URL.createObjectURL(stream);
+					video.play();
+				}, errBack);
+			}
+
+			// Trigger photo take
+			document.getElementById('snap').addEventListener('click', function() {
+				context.drawImage(video, 0, 0, 640, 480);
+			});
+		}, false);
+
+	</script>
+	
+
+</div>
+
+</main>
+
+
+
+	<style>
+	#carbonads {
+position: absolute;
+top: 0;
+right: 0;
+display: block;
+overflow: hidden;
+padding: 1.5em 1em;
+max-width: 230px;
+border: solid 1px hsl(0, 0%, 88%);
+background-color: hsl(0, 0%, 96%);
+text-align: center;
+font-size: 18px;
+line-height: 1.5;
+transition: all .2s ease-in-out;
+}
+
+#carbonads:hover {
+background-color: hsl(0, 0%, 93%);
+}
+
+#carbonads a {
+text-decoration: none;
+}
+
+#carbonads span {
+display: block;
+overflow: hidden;
+}
+
+.carbon-img img {
+display: block;
+margin: 0 auto 1em;
+}
+
+.carbon-text {
+display: block;
+margin-bottom: .5em;
+}
+
+.carbon-poweredby {
+display: block;
+font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	#carbonads { display:none; }
+}
+
+	</style>
+	<script>
+	window.TEMP_JSON = window.JSON;
+	window.JSON = window.ORIGINAL_JSON;
+	</script>
+	<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=davidwalshname" id="_carbonads_js"></script>
+
+
+<script>
+
+document.body.className+= ' demo-page';
+
+window.addEventListener('load', function() {
+	var s = 'script';
+	var d = document;
+	var w = window;
+	var firstScript = d.getElementsByTagName(s)[0];
+
+
+	(function() {
+		var first_paragraph = document.getElementsByTagName('p')[0];
+		if(first_paragraph) {
+			first_paragraph.className = 'demo-intro';
+		}
+
+		setTimeout(function() {
+			var headerA = d.getElementById('header-fx');
+			if(headerA) headerA.className += ' complete';
+		}, 2000);
+	})();
+
+
+	// BSA bitches!
+	var bsa = d.createElement(s);
+	bsa.async = 1;
+	bsa.src = '//s3.buysellads.com/ac/bsa.js';
+	firstScript.parentNode.insertBefore(bsa, firstScript);
+
+	// Promo!
+	(function() {
+
+		var promoNode = d.getElementById('promoNode');
+
+		// Temporary - use MooTools 2.0 when available
+		function createElement(tagName, attr, parent) {
+			var el = d.createElement(tagName);
+			for(prop in attr) {
+				if(attr.hasOwnProperty(prop)) el.setAttribute(prop, attr[prop]);
+			}
+			parent.appendChild(el);
+			return el;
+		}
+
+		// Loads a script
+		function loadScript(url) {
+			var script = d.createElement('script');
+			script.src = url;
+			script.setAttribute('async', 'true');
+			d.documentElement.firstChild.appendChild(script);
+		}
+
+		// Create the Twitter widget, inject
+		createElement('a', {
+			href: '//twitter.com/share',
+			'data-count': 'horizontal',
+			'class': 'twitter-share-button'
+		}, createElement('span', {}, promoNode));
+		loadScript('//platform.twitter.com/widgets.js');
+
+		// Create the Google Plus icon
+		var gl = createElement('g:plusone', {
+			href: w.location,
+			size: 'medium'
+		}, createElement('span', {}, promoNode));
+		loadScript('//apis.google.com/js/plusone.js');
+
+		// Create the Facebook widget
+		createElement('iframe', {
+			src: '//facebook.com/plugins/like.php?href=' + w.location,
+			scrolling: 'no',
+			frameborder: 0,
+			allowTransparency: true,
+			style: 'border:none; overflow:hidden; float:left; height:24px; margin-top:3px;'
+		}, createElement('span', {}, promoNode));
+
+	})();
+
+  [].slice.call(document.querySelectorAll('header img[data-src]')).forEach(function(el) {
+    el.src = el.getAttribute('data-src');
+  });
+});
+
+!function(e){var t=e.createElement("link"),s="setAttribute";t[s]("type","text/css"),t[s]("rel","stylesheet"),t[s]("href","//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"),e.body.appendChild(t)}(z.d);!function(e){var t=e.documentElement,n="fonts-loaded";if(-1==t.className.indexOf(n)){var s=e.createElement("link"),a="setAttribute";s.onload=function(){t.className+=" "+n},s[a]("type","text/css"),s[a]("rel","stylesheet"),s[a]("href",z.themePath+"/fonts.css"),e.body.appendChild(s)}}(z.d);</script>
+        
+    </body>
+    </html>
